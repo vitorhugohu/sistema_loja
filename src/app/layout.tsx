@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tortiletes da Rô",
-  description: "Loja especializada em tortiletes",
+  title: "Adoce",
+  description: "Loja especializada em doces",
+   icons: {
+    icon: "/adoce.jpg", // ou /favicon.ico
+  },
 };
 
 export default function RootLayout({

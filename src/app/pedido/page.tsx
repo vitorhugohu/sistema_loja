@@ -120,7 +120,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-amber-100">
       {/* HEADER */}
-      <header className="flex justify-between items-center bg-amber-900 text-white p-6">
+      <header className="flex justify-between items-center bg-amber-900 text-white px-8 py-6">
         <h1 className="text-2xl font-bold">Realizar Pedido</h1>
         <Link href="/" className="hover:underline">
           Voltar

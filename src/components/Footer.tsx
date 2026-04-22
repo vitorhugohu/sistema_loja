@@ -19,7 +19,7 @@ export default function Footer() {
         </a>
 
         <a
-          href=" https://wa.me/5585986985220?text=Olá%20tudo%20bem"
+          href=" https://wa.me/5585986985220?text=Olá%20tudo%20bem?"
           target="_blank"
         >
           <Image

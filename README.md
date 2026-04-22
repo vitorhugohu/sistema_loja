@@ -16,7 +16,7 @@ Sistema web de uma loja de doces desenvolvido em React, onde o cliente pode esco
 
 ## 📲 Envio do Pedido
 <p align="center">
-  <img src="./assets/carrinho.png" width="700" />
+  <img src="./assets/carrinho_2.png" width="700" />
 </p>
 
 ---
