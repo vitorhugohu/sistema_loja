@@ -142,7 +142,7 @@ export default function EnviarPedido() {
       <a
         href={`https://wa.me/5585986985220?text=${encodeURIComponent(mensagem)}`}
         target="_blank"
-        className="bg-green-600 text-white p-3 rounded mt-3 inline-block font-semibold"
+        className="bg-green-600 hover:bg-green-500 text-white p-3 rounded mt-3 inline-block font-semibold"
       >
         Enviar no WhatsApp
       </a>

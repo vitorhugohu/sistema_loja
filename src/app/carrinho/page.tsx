@@ -2,9 +2,17 @@
 import EnviarPedido from "@/components/EnviarPedido";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [carrinho, setCarrinho] = useState<any>(null);
+  const router = useRouter();
+
+  const limparCarrinho = () => {
+    localStorage.removeItem("carrinho");
+    setCarrinho(null);
+    router.push("/");
+  };
 
   useEffect(() => {
     const storage = localStorage.getItem("carrinho");
@@ -12,44 +20,47 @@ export default function Home() {
     if (storage) {
       setCarrinho(JSON.parse(storage));
     } else {
-      setCarrinho({});
+      setCarrinho(null);
     }
   }, []);
 
-  if (!carrinho) return <p>Carregando...</p>;
+  if (!carrinho) return <p>Carrinho vazio</p>;
 
   return (
-  <div className="flex flex-col min-h-screen bg-amber-100 ">
+    <div className="flex flex-col min-h-screen bg-amber-100">
 
-    <header className="flex justify-between items-center bg-amber-900 text-white px-8 py-6">
-      <h1 className="text-2xl font-black">
-        Pedidos
-      </h1>
+      <header className="flex justify-between items-center bg-amber-900 text-white px-8 py-6">
+        <h1 className="text-2xl font-black">Pedidos</h1>
 
-      <Link
-        href="/"
-        className="hover:underline font-semibold"
-      >
-        Voltar
-      </Link>
-    </header>
+        <Link href="/" className="hover:underline font-semibold">
+          Voltar
+        </Link>
+      </header>
 
-    <main className="flex flex-1 items-start justify-center p-6">
+      <main className="flex flex-1 items-start justify-center p-6">
+        <div className="w-full max-w-2xl bg-white rounded-xl shadow-lg p-6">
 
-      <div className="w-full max-w-2xl bg-white rounded-xl shadow-lg p-6">
+          <div className="flex flex-col gap-4">
+            <EnviarPedido />
+          </div>
 
-        <div className="flex flex-col gap-4">
-          <EnviarPedido />
+          {/* Ações */}
+          <div className="flex justify-end mt-6">
+            <button
+              className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 hover:cursor-pointer"
+              onClick={limparCarrinho}
+            >
+              Limpar
+            </button>
+          </div>
+
         </div>
+      </main>
 
-      </div>
+      <footer className="bg-amber-900 text-white text-center p-3 font-semibold">
+        © 2025-{new Date().getFullYear()}
+      </footer>
 
-    </main>
-
-    <footer className="bg-amber-900 text-white text-center p-3 font-semibold">
-      © 2025-{new Date().getFullYear()}
-    </footer>
-
-  </div>
-);
+    </div>
+  );
 }
