@@ -2,8 +2,19 @@
 
 Sistema web de uma loja de doces desenvolvido em React, onde o cliente pode escolher produtos, adicionar ao carrinho e finalizar o pedido diretamente pelo WhatsApp.
 
+# Home
 <p align="center">
-  <img src="./public/torti_cala.png" width="700" />
+  <img src="./assets/home" width="700" />
+</p>
+
+# Tela de pedido
+<p align="center">
+  <img src="./assets/pedido" width="700" />
+</p>
+
+# Tela de enviar pedido
+<p align="center">
+  <img src="./assets/carrinho" width="700" />
 </p>
 
 ---
