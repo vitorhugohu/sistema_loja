@@ -14,15 +14,20 @@ export default function EnviarPedido() {
     let msg = "🛒 *Pedido - Tortiletes da Rô*\n\n";
     let total = 0;
 
-    const precoPeq = 2;
-    const precoGran = 2.5;
+    let precoPeq = 1;
+    const precoGran = 3;
 
-    // LEITE
+    // LEITE 
     if (data.tortLeitePeq || data.tortLeiteGran) {
       msg += "🍮 Leite Condensado\n";
 
       if (data.tortLeitePeq) {
         msg += `- Pequena: ${data.tortLeitePeq}\n`;
+
+        if(data.tortLeitePeq >= 50) {
+          precoPeq = 0.9
+        }
+
         total += data.tortLeitePeq * precoPeq;
       }
 
@@ -40,6 +45,11 @@ export default function EnviarPedido() {
 
       if (data.tortChocolatePeq) {
         msg += `- Pequena: ${data.tortChocolatePeq}\n`;
+
+        if(data.tortChocolatePeq >= 50) {
+          precoPeq = 0.9
+        }
+
         total += data.tortChocolatePeq * precoPeq;
       }
 
@@ -57,6 +67,11 @@ export default function EnviarPedido() {
 
       if (data.tortGoiabadaPeq) {
         msg += `- Pequena: ${data.tortGoiabadaPeq}\n`;
+
+        if(data.tortGoiabadaPeq >= 50) {
+          precoPeq = 0.9
+        }
+
         total += data.tortGoiabadaPeq * precoPeq;
       }
 
@@ -74,6 +89,11 @@ export default function EnviarPedido() {
 
       if (data.tortQueijoPeq) {
         msg += `- Pequena: ${data.tortQueijoPeq}\n`;
+
+        if(data.tortQueijoPeq >= 50) {
+          precoPeq = 0.9
+        }
+
         total += data.tortQueijoPeq * precoPeq;
       }
 
@@ -91,6 +111,11 @@ export default function EnviarPedido() {
 
       if (data.tortCalabresaPeq) {
         msg += `- Pequena: ${data.tortCalabresaPeq}\n`;
+
+        if(data.tortCalabresaPeq >= 50) {
+          precoPeq = 0.9
+        }
+
         total += data.tortCalabresaPeq * precoPeq;
       }
 

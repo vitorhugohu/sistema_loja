@@ -19,7 +19,7 @@ export default function ProdutoCard({
   id,
 }: ProdutoCardProps) {
   return (
-    <div className="bg-white p-4 rounded-md flex flex-col gap-2 border-none shadow-sm hover:shadow-md transition-shadow">
+    <div className="bg-white p-4 rounded-md flex flex-col gap-4 border-none shadow-sm hover:shadow-md transition-shadow">
       <Image
         src={imagem}
         alt={nome}
