@@ -19,13 +19,13 @@ export default function ProdutoCard({
   id,
 }: ProdutoCardProps) {
   return (
-    <div className="bg-white p-4 rounded-md flex flex-col gap-4 border-none shadow-sm hover:shadow-md transition-shadow">
+    <div className="bg-white p-4 rounded-md flex flex-col gap-4 border-none shadow-sm hover:shadow-md transition-shadow font-semibold">
       <Image
         src={imagem}
         alt={nome}
         width={200}
         height={200}
-        className="rounded-full"
+        className="rounded-full font-semibold"
       />
 
       <p className="font-sans text-sm">{nome}</p>

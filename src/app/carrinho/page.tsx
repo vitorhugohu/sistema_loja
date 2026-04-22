@@ -19,10 +19,10 @@ export default function Home() {
   if (!carrinho) return <p>Carregando...</p>;
 
   return (
-  <div className="flex flex-col min-h-screen bg-amber-100">
+  <div className="flex flex-col min-h-screen bg-amber-100 ">
 
     <header className="flex justify-between items-center bg-amber-900 text-white px-8 py-6">
-      <h1 className="text-2xl font-bold">
+      <h1 className="text-2xl font-semibold">
         Pedidos
       </h1>
 

@@ -134,15 +134,15 @@ export default function EnviarPedido() {
   }, []);
 
   return (
-    <div className="p-4">
+    <div className="p-4 font-semibold">
       <h1>Resumo do Pedido</h1>
 
-      <pre className="bg-white p-3 rounded">{mensagem}</pre>
+      <pre className="bg-white p-3 rounded font-semibold">{mensagem}</pre>
 
       <a
         href={`https://wa.me/5585986985220?text=${encodeURIComponent(mensagem)}`}
         target="_blank"
-        className="bg-green-600 text-white p-3 rounded mt-3 inline-block"
+        className="bg-green-600 text-white p-3 rounded mt-3 inline-block font-semibold"
       >
         Enviar no WhatsApp
       </a>
