@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍰 Adoce
 
-## Getting Started
+Sistema web de uma loja de doces desenvolvido em React, onde o cliente pode escolher produtos, adicionar ao carrinho e finalizar o pedido diretamente pelo WhatsApp.
 
-First, run the development server:
+---
+
+## 🏠 Home
+<p align="center">
+  <img src="./assets/home.png" width="700" />
+</p>
+
+## 🛒 Tela de Pedido
+<p align="center">
+  <img src="./assets/pedido.png" width="700" />
+</p>
+
+## 📲 Envio do Pedido
+<p align="center">
+  <img src="./assets/carrinho.png" width="700" />
+</p>
+
+---
+
+## 🚀 Funcionalidades
+
+- 🧁 Listagem de produtos (doces)  
+- ➕ Adição de itens ao carrinho  
+- 🔢 Controle de quantidade (pequeno e grande)  
+- 💰 Cálculo automático do valor total  
+- 🛒 Persistência do carrinho com `localStorage`  
+- 📲 Envio do pedido direto para o WhatsApp  
+- 🎯 Aplicação de desconto automático (compras acima de 50 unidades)  
+
+---
+
+## 🖥️ Demonstração
+
+O usuário pode:
+
+- Escolher um doce  
+- Selecionar a quantidade (Pequeno ou Grande)  
+- Adicionar ao carrinho  
+- Visualizar o resumo do pedido  
+- Enviar o pedido via WhatsApp  
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- React (Next.js)  
+- Tailwind CSS  
+- JavaScript / TypeScript  
+- LocalStorage (persistência de dados)  
+
+---
+
+## 📦 Como rodar o projeto
 
 ```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
+
+# Acesse a pasta
+cd seu-repositorio
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação estará disponível em:  
+`http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📲 Fluxo do Pedido
 
-## Learn More
+1. O cliente monta o pedido no site  
+2. O sistema gera automaticamente uma mensagem formatada  
+3. O usuário é redirecionado para o WhatsApp da loja  
+4. O cliente finaliza informando:
+   - 📍 Endereço  
+   - 💳 Forma de pagamento  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💡 Regras de Negócio
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Tortilete pequena: **R$ 1,00**  
+- Tortilete grande: **R$ 3,00**  
 
-## Deploy on Vercel
+**Desconto automático:**
+- Compras com **50 ou mais unidades pequenas → R$ 0,90 cada**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Estrutura do Projeto
+
+```bash
+src/
+ ├── app/
+ │   ├── page.tsx
+ │   ├── pedido/
+ │   ├── carrinho/
+ │
+ ├── components/
+ │   ├── ProdutoCard
+ │   ├── EnviarPedido
+ │   ├── App.tsx
+ │   ├── Footer.tsx
+```
+
+---
+
+## 🎯 Objetivo do Projeto
+
+Esse projeto foi desenvolvido com o objetivo de simular um sistema simples de pedidos online para pequenas lojas, facilitando o contato direto com o cliente via WhatsApp.
+
+---
+
+## 📌 Melhorias Futuras
+
+- 🔐 Integração com banco de dados  
+- 📊 Painel administrativo  
+- 💳 Integração com pagamentos online  
+- 📱 Melhorias na responsividade mobile  
+- 🧾 Histórico de pedidos  
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Vitor Hugo**
