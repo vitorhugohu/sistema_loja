@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="bg-amber-900  flex p-3 text-white justify-between">
-      <p className="font-sans flex flex-row">
+    <div className="bg-amber-900  flex p-3 text-white justify-between font-semibold">
+      <p className="flex flex-row">
         © 2025-{new Date().getFullYear()}
       </p>
 

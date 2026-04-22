@@ -22,13 +22,13 @@ export default function Home() {
   <div className="flex flex-col min-h-screen bg-amber-100 ">
 
     <header className="flex justify-between items-center bg-amber-900 text-white px-8 py-6">
-      <h1 className="text-2xl font-semibold">
+      <h1 className="text-2xl font-black">
         Pedidos
       </h1>
 
       <Link
         href="/"
-        className="absolute right-6 top-6 text-sm hover:underline"
+        className="hover:underline font-semibold"
       >
         Voltar
       </Link>
@@ -46,7 +46,7 @@ export default function Home() {
 
     </main>
 
-    <footer className="bg-amber-900 text-white text-center p-3">
+    <footer className="bg-amber-900 text-white text-center p-3 font-semibold">
       © 2025-{new Date().getFullYear()}
     </footer>
 

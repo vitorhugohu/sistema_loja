@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-amber-900 p-8 font-black text-4xl text-center font-sans text-white">
+      <header className="bg-amber-900 p-8 font-black text-4xl text-center text-white">
         <h1>Adoce</h1>
       </header>
 

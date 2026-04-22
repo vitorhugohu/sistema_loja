@@ -102,14 +102,14 @@ export default function PedidoClient() {
     <p className="flex items-center gap-2 bg-white p-5 rounded-md">
       {nome}
       <button
-        className="rounded-full bg-gray-400 w-6 h-6 flex items-center justify-center hover:cursor-pointer hover:bg-gray-200"
+        className="rounded-full bg-gray-400 w-6 h-6 flex items-center font-semibold justify-center hover:cursor-pointer hover:bg-gray-200"
         onClick={() => valor > 0 && setValor(valor - 1)}
       >
         -
       </button>
       {valor}
       <button
-        className="rounded-full bg-gray-400 w-6 h-6 flex items-center justify-center hover:cursor-pointer hover:bg-gray-200"
+        className="rounded-full bg-gray-400 w-6 h-6 flex items-center font-semibold justify-center hover:cursor-pointer hover:bg-gray-200"
         onClick={() => setValor(valor + 1)}
       >
         +
@@ -120,8 +120,8 @@ export default function PedidoClient() {
   return (
     <div className="flex flex-col min-h-screen bg-amber-100">
       {/* HEADER */}
-      <header className="flex justify-between items-center bg-amber-900 text-white px-8 py-6">
-        <h1 className="text-2xl font-bold">Realizar Pedido</h1>
+      <header className="flex justify-between items-center bg-amber-900 text-white px-8 py-6 font-black">
+        <h1 className="text-2xl">Realizar Pedido</h1>
         <Link href="/" className="hover:underline">
           Voltar
         </Link>
@@ -227,7 +227,7 @@ export default function PedidoClient() {
       </main>
 
       {/* FOOTER */}
-      <footer className="bg-amber-900 text-white p-3 text-center">
+      <footer className="bg-amber-900 text-white p-3 text-center font-semibold">
         © 2025-{new Date().getFullYear()}
       </footer>
     </div>

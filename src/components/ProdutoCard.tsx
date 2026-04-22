@@ -38,7 +38,7 @@ export default function ProdutoCard({
 
       <Link
         href={`/pedido?id=${id}`}
-        className="text-white rounded-full p-2 w-24 text-center bg-emerald-600 hover:bg-emerald-700"
+        className="text-white rounded-full p-2 w-24 text-center bg-emerald-600 hover:bg-emerald-700 font-semibold"
       >
         Comprar
       </Link>
