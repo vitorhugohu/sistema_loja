@@ -91,6 +91,8 @@ src/
  ├── components/
  │   ├── ProdutoCard
  │   ├── EnviarPedido
+     ├── App.tsx
+     ├── Footer.tsx
 ```
 
 ---
