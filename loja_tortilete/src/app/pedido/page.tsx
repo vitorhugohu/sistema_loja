@@ -58,37 +58,32 @@ export default function Home() {
   // cálculo do total
   const calculaTotal = () => {
     if (id === 1) {
-
-      if(tortLeitePeq >= 50) {
-        valorTorPeq = 0.9
+      if (tortLeitePeq >= 50) {
+        valorTorPeq = 0.9;
       }
 
       return tortLeitePeq * valorTorPeq + tortLeiteGran * valorTorGran;
     } else if (id === 2) {
-
-       if(tortChocolatePeq >= 50) {
-        valorTorPeq = 0.9
+      if (tortChocolatePeq >= 50) {
+        valorTorPeq = 0.9;
       }
 
       return tortChocolatePeq * valorTorPeq + tortChocolateGran * valorTorGran;
     } else if (id === 3) {
-
-       if(tortGoiabadaPeq >= 50) {
-        valorTorPeq = 0.9
+      if (tortGoiabadaPeq >= 50) {
+        valorTorPeq = 0.9;
       }
 
       return tortGoiabadaPeq * valorTorPeq + tortGoiabadaGran * valorTorGran;
     } else if (id === 4) {
-
-       if(tortQueijoPeq >= 50) {
-        valorTorPeq = 0.9
+      if (tortQueijoPeq >= 50) {
+        valorTorPeq = 0.9;
       }
 
       return tortQueijoPeq * valorTorPeq + tortQueijoGran * valorTorGran;
     } else {
-
-       if(tortCalabresaPeq >= 50) {
-        valorTorPeq = 0.9
+      if (tortCalabresaPeq >= 50) {
+        valorTorPeq = 0.9;
       }
 
       return tortCalabresaPeq * valorTorPeq + tortCalabresaGran * valorTorGran;
@@ -123,39 +118,102 @@ export default function Home() {
   );
 
   return (
-  <div className="flex flex-col min-h-screen bg-amber-100">
+    <div className="flex flex-col min-h-screen bg-amber-100">
+      {/* HEADER */}
+      <header className="flex justify-between items-center bg-amber-900 text-white p-6">
+        <h1 className="text-2xl font-bold">Realizar Pedido</h1>
+        <Link href="/" className="hover:underline">
+          Voltar
+        </Link>
+      </header>
 
-    {/* HEADER */}
-    <header className="flex justify-between items-center bg-amber-900 text-white p-6">
-      <h1 className="text-2xl font-bold">Realizar Pedido</h1>
-      <Link href="/" className="hover:underline">Voltar</Link>
-    </header>
+      {/* MAIN */}
+      <main className="flex flex-1 items-center justify-center p-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+          {/* Pequeno */}
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <h2 className="text-xl font-semibold mb-4 text-center">Pequeno</h2>
 
-    {/* MAIN */}
-    <main className="flex flex-1 items-center justify-center p-6">
+            <div className="space-y-3">
+              {id === 1 && (
+                <ItemControl
+                  nome="Leite Condensado"
+                  valor={tortLeitePeq}
+                  setValor={setTortLeitePeq}
+                />
+              )}
+              {id === 2 && (
+                <ItemControl
+                  nome="Chocolate"
+                  valor={tortChocolatePeq}
+                  setValor={setTortChocolatePeq}
+                />
+              )}
+              {id === 3 && (
+                <ItemControl
+                  nome="Goiabada"
+                  valor={tortGoiabadaPeq}
+                  setValor={setTortGoiabadaPeq}
+                />
+              )}
+              {id === 4 && (
+                <ItemControl
+                  nome="Queijo"
+                  valor={tortQueijoPeq}
+                  setValor={setTortQueijoPeq}
+                />
+              )}
+              {id === 5 && (
+                <ItemControl
+                  nome="Calabresa"
+                  valor={tortCalabresaPeq}
+                  setValor={setTortCalabresaPeq}
+                />
+              )}
+            </div>
+          </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+          {/* Grande */}
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <h2 className="text-xl font-semibold mb-4 text-center">Grande</h2>
 
-        {/* Pequeno */}
-        <div className="bg-white rounded-xl shadow-lg p-6">
-          <h2 className="text-xl font-semibold mb-4 text-center">Pequeno</h2>
-
-          <div className="space-y-3">
-            {id === 1 && (
-              <ItemControl nome="Leite Condensado" valor={tortLeitePeq} setValor={setTortLeitePeq} />
-            )}
-            {id === 2 && (
-              <ItemControl nome="Chocolate" valor={tortChocolatePeq} setValor={setTortChocolatePeq} />
-            )}
-            {id === 3 && (
-              <ItemControl nome="Goiabada" valor={tortGoiabadaPeq} setValor={setTortGoiabadaPeq} />
-            )}
-            {id === 4 && (
-              <ItemControl nome="Queijo" valor={tortQueijoPeq} setValor={setTortQueijoPeq} />
-            )}
-            {id === 5 && (
-              <ItemControl nome="Calabresa" valor={tortCalabresaPeq} setValor={setTortCalabresaPeq} />
-            )}
+            <div className="space-y-3">
+              {id === 1 && (
+                <ItemControl
+                  nome="Leite Condensado"
+                  valor={tortLeiteGran}
+                  setValor={setTortLeiteGran}
+                />
+              )}
+              {id === 2 && (
+                <ItemControl
+                  nome="Chocolate"
+                  valor={tortChocolateGran}
+                  setValor={setTortChocolateGran}
+                />
+              )}
+              {id === 3 && (
+                <ItemControl
+                  nome="Goiabada"
+                  valor={tortGoiabadaGran}
+                  setValor={setTortGoiabadaGran}
+                />
+              )}
+              {id === 4 && (
+                <ItemControl
+                  nome="Queijo"
+                  valor={tortQueijoGran}
+                  setValor={setTortQueijoGran}
+                />
+              )}
+              {id === 5 && (
+                <ItemControl
+                  nome="Calabresa"
+                  valor={tortCalabresaGran}
+                  setValor={setTortCalabresaGran}
+                />
+              )}
+            </div>
           </div>
 
           <Link
@@ -166,37 +224,12 @@ export default function Home() {
             Adicionar: R$ {calculaTotal().toFixed(2)}
           </Link>
         </div>
+      </main>
 
-        {/* Grande */}
-        <div className="bg-white rounded-xl shadow-lg p-6">
-          <h2 className="text-xl font-semibold mb-4 text-center">Grande</h2>
-
-          <div className="space-y-3">
-            {id === 1 && (
-              <ItemControl nome="Leite Condensado" valor={tortLeiteGran} setValor={setTortLeiteGran} />
-            )}
-            {id === 2 && (
-              <ItemControl nome="Chocolate" valor={tortChocolateGran} setValor={setTortChocolateGran} />
-            )}
-            {id === 3 && (
-              <ItemControl nome="Goiabada" valor={tortGoiabadaGran} setValor={setTortGoiabadaGran} />
-            )}
-            {id === 4 && (
-              <ItemControl nome="Queijo" valor={tortQueijoGran} setValor={setTortQueijoGran} />
-            )}
-            {id === 5 && (
-              <ItemControl nome="Calabresa" valor={tortCalabresaGran} setValor={setTortCalabresaGran} />
-            )}
-          </div>
-        </div>
-
-      </div>
-    </main>
-
-    {/* FOOTER */}
-    <footer className="bg-amber-900 text-white p-3 text-center">
-      © 2025-{new Date().getFullYear()}
-    </footer>
-  </div>
-);
+      {/* FOOTER */}
+      <footer className="bg-amber-900 text-white p-3 text-center">
+        © 2025-{new Date().getFullYear()}
+      </footer>
+    </div>
+  );
 }

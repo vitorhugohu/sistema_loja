@@ -11,7 +11,7 @@ export default function EnviarPedido() {
 
     const data = JSON.parse(storage);
 
-    let msg = "🛒 *Pedido - Tortiletes da Rô*\n\n";
+    let msg = "*Pedido - Adoce*\n\n";
     let total = 0;
 
     let precoPeq = 1;
@@ -19,7 +19,7 @@ export default function EnviarPedido() {
 
     // LEITE 
     if (data.tortLeitePeq || data.tortLeiteGran) {
-      msg += "🍮 Leite Condensado\n";
+      msg += "Leite Condensado\n";
 
       if (data.tortLeitePeq) {
         msg += `- Pequena: ${data.tortLeitePeq}\n`;
@@ -41,7 +41,7 @@ export default function EnviarPedido() {
 
     // CHOCOLATE
     if (data.tortChocolatePeq || data.tortChocolateGran) {
-      msg += "🍫 Chocolate\n";
+      msg += "Chocolate\n";
 
       if (data.tortChocolatePeq) {
         msg += `- Pequena: ${data.tortChocolatePeq}\n`;
@@ -63,7 +63,7 @@ export default function EnviarPedido() {
 
     // GOIABADA
     if (data.tortGoiabadaPeq || data.tortGoiabadaGran) {
-      msg += "🍓 Goiabada\n";
+      msg += "Goiabada\n";
 
       if (data.tortGoiabadaPeq) {
         msg += `- Pequena: ${data.tortGoiabadaPeq}\n`;
@@ -85,7 +85,7 @@ export default function EnviarPedido() {
 
     // QUEIJO
     if (data.tortQueijoPeq || data.tortQueijoGran) {
-      msg += "🧀 Queijo\n";
+      msg += "Queijo\n";
 
       if (data.tortQueijoPeq) {
         msg += `- Pequena: ${data.tortQueijoPeq}\n`;
@@ -107,7 +107,7 @@ export default function EnviarPedido() {
 
     // CALABRESA
     if (data.tortCalabresaPeq || data.tortCalabresaGran) {
-      msg += "🥓 Calabresa\n";
+      msg += "Calabresa\n";
 
       if (data.tortCalabresaPeq) {
         msg += `- Pequena: ${data.tortCalabresaPeq}\n`;
@@ -127,8 +127,8 @@ export default function EnviarPedido() {
       msg += "\n";
     }
 
-    msg += `💰 *Total: R$ ${total.toFixed(2)}*\n\n`;
-    msg += "📍 Pedido realizado pelo site";
+    msg += ` *Total: R$ ${total.toFixed(2)}*\n\n`;
+    msg += " Pedido realizado pelo site";
 
     setMensagem(msg);
   }, []);
