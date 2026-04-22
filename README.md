@@ -2,17 +2,19 @@
 
 Sistema web de uma loja de doces desenvolvido em React, onde o cliente pode escolher produtos, adicionar ao carrinho e finalizar o pedido diretamente pelo WhatsApp.
 
-# Home
+---
+
+## 🏠 Home
 <p align="center">
   <img src="./assets/home.png" width="700" />
 </p>
 
-# Tela de pedido
+## 🛒 Tela de Pedido
 <p align="center">
   <img src="./assets/pedido.png" width="700" />
 </p>
 
-# Tela de enviar pedido
+## 📲 Envio do Pedido
 <p align="center">
   <img src="./assets/carrinho.png" width="700" />
 </p>
