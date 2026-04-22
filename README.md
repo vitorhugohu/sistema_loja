@@ -4,17 +4,17 @@ Sistema web de uma loja de doces desenvolvido em React, onde o cliente pode esco
 
 # Home
 <p align="center">
-  <img src="./assets/home" width="700" />
+  <img src="./assets/home.png" width="700" />
 </p>
 
 # Tela de pedido
 <p align="center">
-  <img src="./assets/pedido" width="700" />
+  <img src="./assets/pedido.png" width="700" />
 </p>
 
 # Tela de enviar pedido
 <p align="center">
-  <img src="./assets/carrinho" width="700" />
+  <img src="./assets/carrinho.png" width="700" />
 </p>
 
 ---
